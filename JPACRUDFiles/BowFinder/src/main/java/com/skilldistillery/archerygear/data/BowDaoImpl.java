@@ -1,12 +1,21 @@
 package com.skilldistillery.archerygear.data;
 
-import com.skilldistillery.archerygear.entities.Bow;
+import org.springframework.stereotype.Service;
 
+import com.skilldistillery.archerygear.entities.Bow;
+import java.lang.String;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
+import jakarta.persistence.PersistenceContext;
+import jakarta.transaction.Transactional;
 
+@Service 
+@Transactional
 public class BowDaoImpl implements BowDAO {
+	
+	@PersistenceContext
+	private EntityManager em;
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("ArcheryGear");
 
 	public void launch() {
@@ -46,6 +55,23 @@ public class BowDaoImpl implements BowDAO {
 		    em.getTransaction().commit();
 
 		  }
+
+	public Bow findByInt(int bowId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public java.util.List<Bow> findAll() {
+		String jpql = "Select bow FROM Bow bow";
+		return em.createQuery(jpql, Bow.class).getResultList();
+	}
 	
+	public Bow update(int bowInt, Bow bow) {
+		return null;
+	}
+
+	public boolean deleteById(int bowId) {
+		return false;
+	}
 	
 }

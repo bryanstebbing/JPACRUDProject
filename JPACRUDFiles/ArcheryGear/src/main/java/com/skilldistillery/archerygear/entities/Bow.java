@@ -1,13 +1,12 @@
 package com.skilldistillery.archerygear.entities;
-import com.mysql.cj.x.protobuf.MysqlxDatatypes.Object;
-import com.mysql.cj.x.protobuf.MysqlxDatatypes.Scalar.String;
+
+import java.util.Objects;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.Override;
 
 @Entity
 public class Bow {

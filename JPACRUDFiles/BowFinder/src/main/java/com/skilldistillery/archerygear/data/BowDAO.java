@@ -1,6 +1,8 @@
 package com.skilldistillery.archerygear.data;
 
 
+import java.util.List;
+
 import com.skilldistillery.archerygear.entities.Bow;
 
 public interface BowDAO {
