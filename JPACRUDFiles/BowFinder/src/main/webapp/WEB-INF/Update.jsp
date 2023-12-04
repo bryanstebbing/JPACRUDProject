@@ -14,26 +14,16 @@
 <title>Archery Gear</title>
 </head>
 <body>
-
-	<h1>Welcome to the Archery Gear Finder Page</h1>
-
-	<div class="container">
-		<h6>
-			<a href="home.do">Home</a>
-		</h6>
-
-		<h1>Archery Gear Details</h1>
-
-		<div class="dropdown">
-			<button class="dropdownbutton">Options</button>
-			<div class="dropdown-menu">
-				<a href="CreateABow.jsp">Create a Bow</a> 
-				<a href="FindById.jsp">Find a Bow by Id</a> 
-				<a href="Update.jsp">Update a Bow by ID</a>
-				<a href="Remove.jsp">Remove a Bow</a> 
-				<a href="ListAll.jsp">See all Bows</a>
-			</div>
+		<h1>Update a Bow</h1>
+		<h5>Please enter an Id</h5>
+		
+		
+		<div>
+			<h5>Name: ${bow.name}</h5>
+			<h6>Type: ${bow.type_of_bow}</h6>
+			<h6>Weight of Pull: ${bow.weight_of_pull} lbs</h6>
+			<h6>Weight of Bow: ${bow.weight_of_bow} lbs</h6>
 		</div>
-	</div>
+
 </body>
 </html>
