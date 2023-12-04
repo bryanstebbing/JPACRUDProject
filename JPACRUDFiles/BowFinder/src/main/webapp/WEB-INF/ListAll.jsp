@@ -16,12 +16,7 @@
 <body>
 		<h1>List of All Bows in the Database</h1>
 
-		<div>
-			<h5>Name: ${bow.name}</h5>
-			<h6>Type: ${bow.type_of_bow}</h6>
-			<h6>Weight of Pull: ${bow.weight_of_pull} lbs</h6>
-			<h6>Weight of Bow: ${bow.weight_of_bow} lbs</h6>
-		</div>
+	${bowList}
 
 </body>
 </html>

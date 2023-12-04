@@ -26,13 +26,13 @@ public class BowController {
 		return "home";
 	}
 
-	@GetMapping("/create")
+	@GetMapping("/CreateABow")
 	public String showCreateForm(Model model) {
 		model.addAttribute("newBow", new Bow());
 		return "create";
 	}
 
-	@PostMapping("/create")
+	@PostMapping("/CreateABow")
 	public String createBow(@ModelAttribute Bow bow) {
 		bowDao.create(bow);
 		return "redirect:/bows/listall";
@@ -59,7 +59,7 @@ public class BowController {
 		return "redirect:/bows/listall";
 	}
 
-	@GetMapping("/remove/{id}")
+	@GetMapping("/Remove/{id}")
 	public String removeBow(@PathVariable int id, Model model) {
 		Bow existingBow = bowDao.findByInt(id);
 
@@ -71,7 +71,7 @@ public class BowController {
 		return "redirect:/bows/listall";
 	}
 
-	@GetMapping("/findbyid/{id}")
+	@GetMapping("/FindById/{id}")
 	public String findById(@PathVariable int id, Model model) {
         Bow foundBow = bowDao.findByInt(id); 
         if (foundBow != null) {
@@ -82,14 +82,14 @@ public class BowController {
         return "findbyid";
     }
 
-	@GetMapping("/listall")
+	@GetMapping("/ListAll")
 	public String listAllBows(Model model) {
         List<Bow> allBows = bowDao.findAll(); 
         model.addAttribute("allBows", allBows);
         return "listall";
 	}
 	
-    @PostMapping("/listall")
+    @PostMapping("/ListAll")
     public String listAllBowsPost(Model model) {
         return "redirect:/bows/listall";
     }

@@ -17,6 +17,8 @@
 
 		<h1>Remove a Bow</h1>
 		<h5>Please enter an Id</h5>
+		<input type= "number">
+		<input type="submit">
 		<div>
 			<h5>Name: ${bow.name}</h5>
 			<h6>Type: ${bow.type_of_bow}</h6>

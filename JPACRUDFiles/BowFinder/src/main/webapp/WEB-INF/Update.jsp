@@ -16,7 +16,8 @@
 <body>
 		<h1>Update a Bow</h1>
 		<h5>Please enter an Id</h5>
-		
+		<input type= "number">
+		<input type="submit">
 		
 		<div>
 			<h5>Name: ${bow.name}</h5>
